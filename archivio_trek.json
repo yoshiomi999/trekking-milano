@@ -1,0 +1,48 @@
+[
+  {
+    "giorno": "Dom 9 Ago",
+    "titolo": "Trek + Bagno Nel Lago di Lecco",
+    "monte": "Sommafiume da Vestreno · 1137 m (LC)",
+    "organizzatore": "Vicky",
+    "lunghezza": "16 km",
+    "dislivello": 900,
+    "difficolta": "Media",
+    "pranzo": "Pranzo al sacco",
+    "provincia": "Prov. di Lecco",
+    "distanza": "92 km da Milano",
+    "iscrizione": "https://t.me/TrekMI/83964",
+    "youtube": "https://youtu.be/beCHrnXspw4",
+    "data_iso": "2026-08-09"
+  },
+  {
+    "giorno": "Dom 9 Ago",
+    "titolo": "Trek in Svizzera",
+    "monte": "Val Maggia · Cascata del Salto · 330 m",
+    "organizzatore": "Piero",
+    "lunghezza": "12 km",
+    "dislivello": 300,
+    "difficolta": "Media",
+    "pranzo": "Pranzo al sacco",
+    "provincia": "Svizzera",
+    "distanza": "125 km da Milano",
+    "iscrizione": "https://t.me/TrekMI/84004",
+    "youtube": "https://youtu.be/QgyJDPc-AKo",
+    "data_iso": "2026-08-09"
+  },
+  {
+    "giorno": "Dom 9 Ago",
+    "titolo": "Trek in Val di Mello",
+    "monte": "Belvedere Casera Pioda · 1460 m (SO)",
+    "organizzatore": "Pamela",
+    "lunghezza": "9 km",
+    "dislivello": 440,
+    "difficolta": "Medio facile",
+    "pranzo": "Pranzo al sacco",
+    "provincia": "Prov. di Sondrio",
+    "distanza": "125 km da Milano",
+    "iscrizione": null,
+    "iscrizioneTesto": "Gruppo completo, stop iscrizioni",
+    "youtube": "https://youtu.be/1K3uNYelack",
+    "data_iso": "2026-08-09"
+  }
+]

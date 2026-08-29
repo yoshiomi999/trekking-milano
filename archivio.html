@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrekMI — Archivio trek</title>
+<meta name="description" content="Tutte le uscite passate della community TrekMI di Milano.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=JetBrains+Mono:wght@400;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pine-950:#131c15; --pine-900:#1b271d; --pine-800:#233026;
+    --paper:#efe9db; --paper-dim:#d9d2c0;
+    --cai-red:#c1272d; --cai-red-dim:#8f1f24; --ochre:#c08a34;
+    --ink:#1d211a; --line: rgba(239,233,219,0.14);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--pine-950);color:var(--paper);font-family:'Source Sans 3', sans-serif;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px 80px;}
+  header.hero{padding:56px 20px 32px;text-align:center;border-bottom:1px solid var(--line);}
+  .blaze{display:inline-flex;align-items:center;gap:2px;margin-bottom:22px;}
+  .blaze span{display:block;width:26px;height:9px;}
+  .blaze .r{background:var(--cai-red);} .blaze .w{background:var(--paper);}
+  .eyebrow{font-family:'JetBrains Mono', monospace;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--ochre);margin:0 0 10px;}
+  h1{font-family:'Oswald', sans-serif;text-transform:uppercase;font-weight:700;letter-spacing:.03em;font-size:clamp(32px,7vw,48px);margin:0 0 14px;line-height:1.02;}
+  .sub{color:var(--paper-dim);font-size:16px;max-width:46ch;margin:0 auto 22px;line-height:1.5;}
+  .back-link{font-family:'JetBrains Mono', monospace;font-size:13px;text-decoration:none;color:var(--paper-dim);border-bottom:1px dashed var(--paper-dim);padding-bottom:2px;}
+  .week-label{display:flex;align-items:center;gap:14px;margin:44px 0 18px;}
+  .week-label .line{flex:1;height:1px;background:var(--line);}
+  .week-label span{font-family:'JetBrains Mono', monospace;text-transform:uppercase;letter-spacing:.1em;font-size:12px;color:var(--ochre);white-space:nowrap;}
+  #archivio{display:flex;flex-direction:column;gap:36px;}
+  .settimana .lista{display:flex;flex-direction:column;gap:16px;}
+  .card{background:var(--paper);color:var(--ink);border-radius:3px;padding:20px 22px;position:relative;box-shadow:0 10px 24px -14px rgba(0,0,0,0.5);opacity:0.92;}
+  .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--cai-red-dim);}
+  h2{font-family:'Oswald', sans-serif;text-transform:uppercase;font-size:19px;line-height:1.15;margin:0 0 4px;letter-spacing:.01em;}
+  .peak{font-family:'JetBrains Mono', monospace;font-size:12px;color:var(--ochre);font-weight:600;margin-bottom:10px;}
+  .meta{font-size:13px;color:#4c473b;line-height:1.6;}
+  .meta b{color:var(--ink);}
+  .empty{text-align:center;color:var(--paper-dim);font-family:'JetBrains Mono', monospace;font-size:14px;margin-top:60px;}
+  footer{text-align:center;margin-top:60px;padding-top:26px;border-top:1px solid var(--line);font-family:'JetBrains Mono', monospace;font-size:12px;color:var(--paper-dim);line-height:1.8;}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="blaze" aria-hidden="true"><span class="w"></span><span class="r"></span><span class="w"></span></div>
+  <p class="eyebrow">TrekMI · Milano</p>
+  <h1>Archivio trek</h1>
+  <p class="sub">Tutte le uscite già fatte dalla community, settimana per settimana.</p>
+  <a class="back-link" href="index.html">← Torna alle uscite di questo weekend</a>
+</header>
+<div class="wrap">
+  <div id="archivio"></div>
+  <footer>TrekMI — community di trekking, Milano</footer>
+</div>
+<script>
+const ARCHIVIO = [
+  {
+    giorno: "Dom 9 Ago",
+    titolo: "Trek + Bagno Nel Lago di Lecco",
+    monte: "Sommafiume da Vestreno · 1137 m (LC)",
+    organizzatore: "Vicky",
+    lunghezza: "16 km",
+    difficolta: "Media",
+    pranzo: "Pranzo al sacco",
+    provincia: "Prov. di Lecco",
+    distanza: "92 km da Milano",
+    youtube: "https://youtu.be/beCHrnXspw4",
+    dislivello: 900
+  },
+  {
+    giorno: "Dom 9 Ago",
+    titolo: "Trek in Svizzera",
+    monte: "Val Maggia · Cascata del Salto · 330 m",
+    organizzatore: "Piero",
+    lunghezza: "12 km",
+    difficolta: "Media",
+    pranzo: "Pranzo al sacco",
+    provincia: "Svizzera",
+    distanza: "125 km da Milano",
+    youtube: "https://youtu.be/QgyJDPc-AKo",
+    dislivello: 300
+  },
+  {
+    giorno: "Dom 9 Ago",
+    titolo: "Trek in Val di Mello",
+    monte: "Belvedere Casera Pioda · 1460 m (SO)",
+    organizzatore: "Pamela",
+    lunghezza: "9 km",
+    difficolta: "Medio facile",
+    pranzo: "Pranzo al sacco",
+    provincia: "Prov. di Sondrio",
+    distanza: "125 km da Milano",
+    youtube: "https://youtu.be/1K3uNYelack",
+    dislivello: 440
+  },
+];
+
+function renderArchivio(){
+  const container = document.getElementById('archivio');
+  if (!ARCHIVIO.length){
+    container.innerHTML = '<p class="empty">Ancora nessun trek in archivio.</p>';
+    return;
+  }
+  const settimane = [];
+  const indice = new Map();
+  ARCHIVIO.forEach(t => {
+    if (!indice.has(t.giorno)){
+      indice.set(t.giorno, { giorno: t.giorno, treks: [] });
+      settimane.push(indice.get(t.giorno));
+    }
+    indice.get(t.giorno).treks.push(t);
+  });
+
+  container.innerHTML = settimane.map(s => `
+    <section class="settimana">
+      <div class="week-label"><span>${s.giorno}</span><div class="line"></div></div>
+      <div class="lista">
+        ${s.treks.map(t => `
+          <article class="card">
+            <h2>${t.titolo}</h2>
+            ${t.monte ? `<p class="peak">${t.monte}</p>` : ''}
+            <p class="meta">
+              Organizzatore: <b>${t.organizzatore}</b> ·
+              ${t.lunghezza} · ${t.dislivello} m dislivello · ${t.difficolta}${t.note ? ' (' + t.note + ')' : ''}<br>
+              ${t.provincia}${t.distanza ? ' · ' + t.distanza : ''}
+              ${t.youtube ? `· <a href="${t.youtube}" target="_blank" rel="noopener">video del percorso</a>` : ''}
+            </p>
+          </article>
+        `).join('')}
+      </div>
+    </section>
+  `).join('');
+}
+
+renderArchivio();
+</script>
+</body>
+</html>
