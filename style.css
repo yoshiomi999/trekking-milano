@@ -48,9 +48,10 @@ header.hero::before{
 .blaze span{
   display:block; width:26px; height:9px;
 }
-.blaze .r{background:var(--cai-red);}
-.blaze .w{background:var(--paper);}
-
+.blaze .g{background:green;}
+.blaze .w{background:white;}
+.blaze .r{background:red;}
+  
 .eyebrow{
   font-family:'JetBrains Mono', monospace;
   letter-spacing:.14em;
