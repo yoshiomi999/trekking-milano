@@ -72,11 +72,12 @@ h1{
 }
 
 .sub{
-  color:var(--paper-dim);
-  font-size:16px;
-  max-width:46ch;
-  margin:0 auto 24px;
-  line-height:1.5;
+    color: var(--paper-dim);
+    font-size: 16px;
+    max-width: 86ch;
+    margin: 0 auto 24px;
+    line-height: 1.5;
+    text-align: left;
 }
 
 .tg-badge{
