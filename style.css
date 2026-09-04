@@ -128,17 +128,25 @@ h1{
   margin-bottom:6px;
 }
 .day-tag{
-  font-family:'JetBrains Mono', monospace;
-  font-size:15px;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  color:var(--cai-red-dim);
-  font-weight:600;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    background: #bfa160;
+    padding: 14px 20px 9px 21px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px;
+    box-shadow: inset 0 0 8px #7c550da8;
 }
 .prov{
   font-family:'JetBrains Mono', monospace;
   font-size:14px;
   color:#6b6455;
+  margin-top: -5px;
 }
 
 h2{
@@ -146,7 +154,7 @@ h2{
   text-transform:uppercase;
   font-size:22px;
   line-height:1.15;
-  margin:4px 0 4px;
+  margin:10px 0 4px;
   letter-spacing:.01em;
 }
 .peak{
@@ -234,7 +242,7 @@ h2{
   align-items:center;
   gap:8px;
 }
-.btn-primary{background:var(--cai-red); color:#fff;}
+.btn-primary{background:#92a43a; color:#fff;}
 .btn-ghost{background:transparent; color:var(--ink); border:1px solid rgba(29,33,26,0.3);}
 .btn-disabled{
   background:transparent;
