@@ -72,6 +72,7 @@ const MAX_DISLIVELLO = 1200;
 const TREKS = [
   {
     giorno: "Sab 5 Set",
+    anno: 2026,
     titolo: "Trek Sulle Prealpi Bergamasche",
     monte: "Val Sanguigno · Rifugio Gianpace · 1320 m (BG)",
     organizzatore: "Mauro",
@@ -86,6 +87,7 @@ const TREKS = [
   },
   {
     giorno: "Sab 5 Set",
+    anno: 2026,
     titolo: "Trek in Valmalenco",
     monte: "Rifugio Longoni · 2450 m (SO)",
     organizzatore: "Teo",
@@ -100,6 +102,7 @@ const TREKS = [
   },
   {
     giorno: "Sab 5 Set",
+    anno: 2026,
     titolo: "Trek Sulle Prealpi Bergamasche",
     monte: "Giro dei Laghi Dalle Baite di Mezzeno · 2191 m (BG)",
     organizzatore: "Antonio",
@@ -115,6 +118,7 @@ const TREKS = [
   },
   {
     giorno: "Dom 6 Sett",
+    anno: 2026,
     titolo: "Trek Nel Triangolo Lariano",
     monte: "Monte Palanzone da Colma di Sormano · 1434 m (CO)",
     organizzatore: "Laura",
@@ -129,6 +133,7 @@ const TREKS = [
   },
   {
     giorno: "Dom 6 Sett",
+    anno: 2026,
     titolo: "Trek in Valmadrera",
     monte: "Monte Preguda da Valmadrera · 743 m (LC)",
     organizzatore: "Horacio",
@@ -143,6 +148,7 @@ const TREKS = [
   },
   {
     giorno: "Dom 6 Sett",
+    anno: 2026,
     titolo: "TREK IN VAL SERIANA. PIZZO DELLA PRESOLANA 2187 m (BG)",
     monte: "Monte Preguda da Valmadrera · 743 m (LC)",
     organizzatore: "Gianfranco",
@@ -178,7 +184,7 @@ function renderTreks(){
     return `
       <article class="card">
         <div class="card-top">
-          <span class="day-tag">${t.giorno}</span>
+          <span class="day-tag">${t.giorno} ${t.anno}</span>
           <span class="prov">${t.provincia} · ${t.distanza}</span>
         </div>
         <h2>${t.titolo}</h2>

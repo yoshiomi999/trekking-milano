@@ -114,16 +114,12 @@ h1{
 .card{
   background:var(--paper);
   color:var(--ink);
-  border-radius:3px;
-  padding:26px 26px 24px;
+  border-radius:12px;
+  padding:20px 20px;
   position:relative;
   box-shadow:0 12px 30px -14px rgba(0,0,0,0.55);
 }
-.card::before{
-  content:"";
-  position:absolute; left:0; top:0; bottom:0; width:5px;
-  background:var(--cai-red);
-}
+
 .card-top{
   display:flex;
   justify-content:space-between;
@@ -133,7 +129,7 @@ h1{
 }
 .day-tag{
   font-family:'JetBrains Mono', monospace;
-  font-size:12px;
+  font-size:15px;
   letter-spacing:.06em;
   text-transform:uppercase;
   color:var(--cai-red-dim);
@@ -141,7 +137,7 @@ h1{
 }
 .prov{
   font-family:'JetBrains Mono', monospace;
-  font-size:12px;
+  font-size:14px;
   color:#6b6455;
 }
 
@@ -155,15 +151,18 @@ h2{
 }
 .peak{
   font-family:'JetBrains Mono', monospace;
-  font-size:13px;
+  font-size:14px;
   color:var(--ochre);
   font-weight:600;
-  margin-bottom:16px;
+  margin-top: 8px;
+  margin-bottom:0;
+
 }
 .organizer{
-  font-size:14px;
+  font-size:17px;
   color:#4c473b;
-  margin-bottom:18px;
+  margin-top: 10px;
+  margin-bottom: 13px;
 }
 .organizer b{color:var(--ink);}
 
@@ -174,7 +173,6 @@ h2{
   border-top:1px solid rgba(29,33,26,0.12);
   border-bottom:1px solid rgba(29,33,26,0.12);
   padding:16px 0;
-  margin-bottom:16px;
 }
 .stat .k{
   font-family:'JetBrains Mono', monospace;
@@ -215,10 +213,11 @@ h2{
 }
 
 .meta-line{
-  font-size:14px;
-  color:#4c473b;
-  margin-bottom:20px;
-  line-height:1.5;
+    font-size: 15px;
+    color: #4c473b;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
 
 .actions{display:flex; gap:10px; flex-wrap:wrap;}

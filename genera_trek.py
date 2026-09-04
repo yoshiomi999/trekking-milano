@@ -357,6 +357,7 @@ def parse(raw_text: str):
 
         treks.append({
             "giorno": d["giorno"].strip(),
+            "anno": datetime.date.today().year,
             "titolo": titolo,
             "monte": monte,
             "organizzatore": d["organizzatore"].strip(),
@@ -379,6 +380,7 @@ def to_js_array(treks):
     for t in treks:
         righe.append("  {")
         righe.append(f'    giorno: "{js_escape(t["giorno"])}",')
+        righe.append(f'    anno: {t["anno"]},')
         righe.append(f'    titolo: "{js_escape(t["titolo"])}",')
         righe.append(f'    monte: "{js_escape(t["monte"])}",')
         righe.append(f'    organizzatore: "{js_escape(t["organizzatore"])}",')
