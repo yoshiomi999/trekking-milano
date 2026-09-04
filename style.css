@@ -158,19 +158,18 @@ h2{
   letter-spacing:.01em;
 }
 .peak{
-  font-family:'JetBrains Mono', monospace;
-  font-size:14px;
-  color:var(--ochre);
-  font-weight:600;
-  margin-top: 8px;
-  margin-bottom:0;
-
+    font-size: 16px;
+    color: #8c6b36;
+    font-weight: 500;
+    margin-top: 7px;
+    margin-bottom: 12px;
+    line-height: 1.4em;
 }
 .organizer{
   font-size:17px;
   color:#4c473b;
   margin-top: 10px;
-  margin-bottom: 13px;
+  margin-bottom: 5px;
 }
 .organizer b{color:var(--ink);}
 
