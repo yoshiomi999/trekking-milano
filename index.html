@@ -88,14 +88,31 @@ function formatDate(dataIso, fallback){
   if (!dataIso) return fallback;
 
   const [year, month, day] = dataIso.split('-').map(Number);
-  const date = new Date(year, month - 1, day);
-  const giorni = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
   const mesi = [
     'Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno',
     'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'
   ];
 
-  return `${giorni[date.getDay()]} ${day} ${mesi[month - 1]} ${year}`;
+  return `${day} ${mesi[month - 1]} ${year}`;
+}
+
+function formatWeekday(dataIso, fallback){
+  if (dataIso) {
+    const [year, month, day] = dataIso.split('-').map(Number);
+    const date = new Date(year, month - 1, day);
+    return ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'][date.getDay()];
+  }
+
+  const abbreviations = {
+    Lun: 'Lunedì',
+    Mar: 'Martedì',
+    Mer: 'Mercoledì',
+    Gio: 'Giovedì',
+    Ven: 'Venerdì',
+    Sab: 'Sabato',
+    Dom: 'Domenica'
+  };
+  return abbreviations[fallback?.split(' ')[0]] || '';
 }
 
 function dayClass(dataIso, fallback){
@@ -103,7 +120,7 @@ function dayClass(dataIso, fallback){
     const [year, month, day] = dataIso.split('-').map(Number);
     const weekday = new Date(year, month - 1, day).getDay();
     if (weekday === 6) return 'sat';
-    if (weekday === 0) return 'dom';
+    if (weekday === 0) return 'dom';  
   }
 
   if (fallback?.startsWith('Sab')) return 'sat';
@@ -131,10 +148,11 @@ function renderTreks(){
     return `
       <article class="card">
         <div class="card-top">
-          <span class="day-tag ${dayClass(t.data_iso, t.giorno)}">${formatDate(t.data_iso, t.giorno)}</span>
-          <span class="prov">${t.provincia} · ${t.distanza}</span>
+            <span class="day-name ${dayClass(t.data_iso, t.giorno)}">${formatWeekday(t.data_iso, t.giorno)}</span>
+            <span class="date">${formatDate(t.data_iso, t.giorno)}</span>
         </div>
         <h2>${t.titolo}</h2>
+        <div class="prov">${t.provincia} · ${t.distanza}</div>
         <p class="organizer">Organizzatore: <b>${t.organizzatore}</b></p>
         ${descrizione ? `<p class="peak">${descrizione}</p>` : ''}
 
@@ -161,12 +179,12 @@ function renderTreks(){
 
         <p class="meta-line">${diffLabel}. ${t.pranzo}.</p>
 
-        <div class="actions">
+        
           ${t.iscrizione
             ? `<a class="btn btn-primary" href="${t.iscrizione}" target="_blank" rel="noopener">Iscriviti su Telegram</a>`
             : `<span class="btn btn-disabled">${t.iscrizioneTesto || 'Iscrizioni chiuse'}</span>`
           }
-        </div>
+        
       </article>
     `;
   }).join('');
