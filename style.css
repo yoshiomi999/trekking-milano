@@ -227,7 +227,11 @@ h2{
     line-height: 1.5;
 }
 
-.actions{display:flex; gap:10px; flex-wrap:wrap;}
+.actions{
+  display:flex; gap:10px; flex-wrap:wrap;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
 .btn{
   font-family:'JetBrains Mono', monospace;
   font-size:13px;
@@ -245,6 +249,10 @@ h2{
     color: #986714;
     border: 3px solid #c58f25;
     background-color: #e4991024;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
    }
 .btn-ghost{background:transparent; color:var(--ink); border:1px solid rgba(29,33,26,0.3);}
 .btn-disabled{
@@ -254,6 +262,49 @@ h2{
   cursor:default;
 }
 
+.btn-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--ink);
+    padding: 4px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(29, 33, 26, 0.1);
+    background-color: #b180532e;
+}
+
+.icon{
+  display:inline-block;
+
+  flex:0 0 auto;
+  background-color:currentColor;
+  -webkit-mask-position:center;
+  mask-position:center;
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+  -webkit-mask-size:contain;
+  mask-size:contain;
+}
+.icon-youtube{
+  -webkit-mask-image:url('images/icon-youtube.svg');
+  mask-image:url('images/icon-youtube.svg');
+  color:#e72727;
+  width:35px;
+  height:35px;
+}
+.icon-komoot{
+  -webkit-mask-image:url('images/icon-komoot.svg');
+  mask-image:url('images/icon-komoot.svg');
+  color:#639008;
+  width:25px;
+  height:25px;
+
+}
+.btn-youtube{}
+.btn-komoot{} 
 footer{
   text-align:center;
   margin-top:60px;

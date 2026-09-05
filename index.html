@@ -138,6 +138,11 @@ function renderTreks(){
         <p class="organizer">Organizzatore: <b>${t.organizzatore}</b></p>
         ${descrizione ? `<p class="peak">${descrizione}</p>` : ''}
 
+        <div class="actions">
+          ${t.youtube ? `<a class="btn-link btn-youtube" title="Open Youtube" href="${t.youtube}" target="_blank" rel="noopener"><span class="icon icon-youtube" aria-hidden="true"></span>Video del percorso</a>` : ''}
+          ${t.komoot_link ? `<a class="btn-link btn-komoot" title="Open Komoot" href="${t.komoot_link}" target="_blank" rel="noopener"><span class="icon icon-komoot" aria-hidden="true"></span>Percorso su Komoot</a>` : ''}
+        </div>
+        
         <div class="stats">
           <div class="stat">
             <div class="k">Lunghezza</div>
@@ -161,7 +166,6 @@ function renderTreks(){
             ? `<a class="btn btn-primary" href="${t.iscrizione}" target="_blank" rel="noopener">Iscriviti su Telegram</a>`
             : `<span class="btn btn-disabled">${t.iscrizioneTesto || 'Iscrizioni chiuse'}</span>`
           }
-          ${t.youtube ? `<a class="btn btn-ghost" href="${t.youtube}" target="_blank" rel="noopener">Video del percorso</a>` : ''}
         </div>
       </article>
     `;
