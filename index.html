@@ -69,113 +69,7 @@ Per partecipare servono solo l’app Telegram, e il piacere di condividere l’e
 ------------------------------------------------------------------- */
 const MAX_DISLIVELLO = 1200;
 
-const TREKS = [
-  {
-    "giorno": "Sab 5 Set",
-    "titolo": "Trek Col Treno. Sentiero Geologico. Da fonte di Gajum a Terz'Alpe 841 m (CO)",
-    "descrizione": "Per domani sabato 5 sto organizzando un trekking alle marmitte di Canzo, percorso ad anello. Dislivello 400 metri, percorrenza 2,30-3 ore fatto con calma per chi vuole fare qualcosa di tranquillo. Partenza dal parcheggio di Canzo alle 9.00, pranzo al sacco oppure rifugio Terz'Alpe. Chi fosse interessato scriva in privato.",
-    "organizzatore": "Angelo",
-    "lunghezza": "8 km",
-    "dislivello": 400,
-    "difficolta": "Medio facile",
-    "pranzo": "Pranzo al sacco o al rifugio",
-    "provincia": "Prov. di Como",
-    "distanza": "45 km da Milano",
-    "iscrizione": "https://t.me/TrekMI/84491",
-    "youtube": "https://youtu.be/cADRwegmmZU",
-    "data_iso": "2026-09-05"
-  },
-  {
-    "giorno": "Sab 5 Set",
-    "titolo": "Trek sulle Prealpi Bergamasche. Val Sanguigno. Rifugio Gianpace 1320 m (BG)",
-    "descrizione": "Gita in Val Sanguigno (Parco delle Orobie Bergamasche) da Valgiglio (BG) con un percorso ombreggiato alle pozze cristalline e al rifugio Gianpace. Gita relax immersi nei boschi fino al rifugio Gianpace, Orobie Orientali. Chi si iscrive e poi non partecipa senza avvisare o uscire dalla chat è pregato di non iscriversi, per rispetto degli altri. Si richiedono scarpe e abbigliamento adatti a una gita escursionistica.",
-    "organizzatore": "Mauro",
-    "lunghezza": "6 km",
-    "dislivello": 360,
-    "difficolta": "Medio facile",
-    "pranzo": "Pranzo al sacco o al rifugio",
-    "provincia": "Prov. di Bergamo",
-    "distanza": "89 km da Milano",
-    "iscrizione": "https://t.me/TrekMI/84451",
-    "youtube": "https://youtu.be/TYloROYM_yo",
-    "data_iso": "2026-09-05"
-  },
-  {
-    "giorno": "Sab 5 Set",
-    "titolo": "Trek in Valmalenco. Rifugio Longoni 2450 m (SO)",
-    "descrizione": "I Sentieri del Cuore: Val Malenco & Rifugio Longoni. Trekking panoramico spettacolare tra i pascoli selvaggi dell'Alpe Fora e maestose cascate, fino allo storico balcone del Rifugio Longoni (2.450 m). Ricompensa finale: vista mozzafiato sul Monte Disgrazia e sul Bernina, e un pranzo valtellinese in quota. Ritrovo ore 07:00 a Bar La Vergine (Verano Brianza) per car sharing, oppure ore 09:00 a Chiareggio (Valmalenco) per l'inizio del sentiero. Richiesto buon allenamento, scarponi alti, abbigliamento a strati, bastoncini e acqua (min. 1.5L).",
-    "organizzatore": "Teo",
-    "lunghezza": "11 km",
-    "dislivello": 850,
-    "difficolta": "Media",
-    "pranzo": "Pranzo al sacco o al rifugio",
-    "provincia": "Prov. di Sondrio",
-    "distanza": "152 km da Milano",
-    "iscrizione": "https://t.me/TrekMI/84442",
-    "youtube": "https://youtu.be/d2Nckd0wHaY",
-    "data_iso": "2026-09-05"
-  },
-  {
-    "giorno": "Sab 5 Set",
-    "titolo": "Trek sulle Prealpi Bergamasche. Giro dei Laghi dalle Baite di Mezzeno 2191 m (BG)",
-    "descrizione": null,
-    "organizzatore": "Antonio",
-    "lunghezza": "18 km",
-    "dislivello": 1100,
-    "difficolta": "Alta (tanti km)",
-    "pranzo": "Pranzo al sacco",
-    "provincia": "Prov. di Bergamo",
-    "distanza": "95 km da Milano",
-    "iscrizione": "https://t.me/TrekMI/84458",
-    "youtube": "https://youtu.be/7FNJDOls4OY",
-    "data_iso": "2026-09-05"
-  },
-  {
-    "giorno": "Dom 6 Set",
-    "titolo": "Trek nel Triangolo Lariano. Monte Palanzone da Colma di Sormano 1434 m (CO)",
-    "descrizione": null,
-    "organizzatore": "Laura",
-    "lunghezza": "8 km",
-    "dislivello": 310,
-    "difficolta": "Medio facile",
-    "pranzo": "Pranzo al sacco",
-    "provincia": "Prov. di Como",
-    "distanza": "62 km da Milano",
-    "iscrizione": "https://t.me/TrekMI/84341",
-    "youtube": "https://youtu.be/-01-uPjTSwY",
-    "data_iso": "2026-09-06"
-  },
-  {
-    "giorno": "Dom 6 Set",
-    "titolo": "Trek in Valmadrera. Monte Preguda da Valmadrera 743 m (LC)",
-    "descrizione": "Proposta per domenica 6 settembre: anello Monte Preguda da Valmadrera. Distanza da Milano Cadorna 58 km, circa 60 minuti di macchina. Sintesi: 10,0 km per 640 m di dislivello positivo. Partecipazioni limitate a 22 persone più 1 cane, con lista d'attesa attiva. Si chiede di iscriversi solo se davvero interessati a partecipare, per lasciare il posto a chi vuole davvero farla.",
-    "organizzatore": "Horacio",
-    "lunghezza": "10 km",
-    "dislivello": 640,
-    "difficolta": "Media",
-    "pranzo": "Pranzo al sacco",
-    "provincia": "Prov. di Lecco",
-    "distanza": "46 km da Milano",
-    "iscrizione": "https://t.me/TrekMI/84426",
-    "youtube": "https://youtu.be/qz-BMbRYlRk",
-    "data_iso": "2026-09-06"
-  },
-  {
-    "giorno": "Dom 6 Set",
-    "titolo": "Trek in Val Seriana. Pizzo della Presolana 2187 m (BG)",
-    "descrizione": "Pizzo della Presolana, 6 settembre 2026. Ritrovo ore 09:20, partenza ore 09:30 (si chiede puntualità). Altitudine minima 1283 m slm, altitudine massima 2187 m slm, dislivello positivo 899 m, lunghezza percorso 11,2 km salvo piccole variazioni. Nessuna difficoltà tecnica, richiesta capacità di camminare in montagna, scarpe da trekking e abbigliamento adeguato.",
-    "organizzatore": "Gianfranco",
-    "lunghezza": "11 km",
-    "dislivello": 900,
-    "difficolta": "Media",
-    "pranzo": "Pranzo al sacco",
-    "provincia": "Prov. di Bergamo",
-    "distanza": "94 km da Milano",
-    "iscrizione": "https://t.me/TrekMI/84447",
-    "youtube": null,
-    "data_iso": "2026-09-06"
-  }
-];
+let TREKS = [];
 
 const DIFF_COLORS = {
   "facile": "#4caf6a",
@@ -190,6 +84,42 @@ function diffColor(diff){
   return DIFF_COLORS[key] || "#c08a34";
 }
 
+function formatDate(dataIso, fallback){
+  if (!dataIso) return fallback;
+
+  const [year, month, day] = dataIso.split('-').map(Number);
+  const date = new Date(year, month - 1, day);
+  const giorni = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
+  const mesi = [
+    'Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno',
+    'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'
+  ];
+
+  return `${giorni[date.getDay()]} ${day} ${mesi[month - 1]} ${year}`;
+}
+
+function dayClass(dataIso, fallback){
+  if (dataIso) {
+    const [year, month, day] = dataIso.split('-').map(Number);
+    const weekday = new Date(year, month - 1, day).getDay();
+    if (weekday === 6) return 'sat';
+    if (weekday === 0) return 'dom';
+  }
+
+  if (fallback?.startsWith('Sab')) return 'sat';
+  if (fallback?.startsWith('Dom')) return 'dom';
+  return '';
+}
+
+async function loadTreks(){
+  const response = await fetch('./this_week_trek.json');
+  if (!response.ok) {
+    throw new Error(`Unable to load trek data: ${response.status}`);
+  }
+  TREKS = await response.json();
+  renderTreks();
+}
+
 function renderTreks(){
   const container = document.getElementById('treks');
   container.innerHTML = TREKS.map(t => {
@@ -201,7 +131,7 @@ function renderTreks(){
     return `
       <article class="card">
         <div class="card-top">
-          <span class="day-tag">${t.giorno} ${t.data_iso ? t.data_iso.slice(0, 4) : ''}</span>
+          <span class="day-tag ${dayClass(t.data_iso, t.giorno)}">${formatDate(t.data_iso, t.giorno)}</span>
           <span class="prov">${t.provincia} · ${t.distanza}</span>
         </div>
         <h2>${t.titolo}</h2>
@@ -238,7 +168,9 @@ function renderTreks(){
   }).join('');
 }
 
-renderTreks();
+loadTreks().catch(error => {
+  console.error(error);
+});
 </script>
 
 </body>

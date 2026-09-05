@@ -130,8 +130,6 @@ h1{
 .day-tag{
     font-family: 'JetBrains Mono', monospace;
     font-size: 15px;
-    letter-spacing: .02em;
-    text-transform: uppercase;
     color: white;
     font-weight: 600;
     background: #bfa160;
@@ -140,13 +138,15 @@ h1{
     margin-left: -20px;
     border-bottom-right-radius: 12px;
     border-top-left-radius: 12px;
-    box-shadow: inset 0 0 8px #7c550da8;
+    box-shadow: inset -1px -1px 5px #0000003f;
 }
+
+.day-tag.sat{background:#3eb0cc}
+.day-tag.dom{background:#df5941}
 .prov{
-  font-family:'JetBrains Mono', monospace;
-  font-size:14px;
-  color:#6b6455;
-  margin-top: -5px;
+    font-size: 16px;
+    color: #5a4b2a;
+    margin-top: -5px;
 }
 
 h2{
@@ -158,7 +158,7 @@ h2{
   letter-spacing:.01em;
 }
 .peak{
-    font-size: 16px;
+    font-size: 17px;
     color: #8c6b36;
     font-weight: 500;
     margin-top: 7px;
@@ -232,7 +232,6 @@ h2{
   font-family:'JetBrains Mono', monospace;
   font-size:13px;
   text-transform:uppercase;
-  letter-spacing:.04em;
   text-decoration:none;
   padding:11px 18px;
   border-radius:2px;
@@ -240,8 +239,13 @@ h2{
   display:inline-flex;
   align-items:center;
   gap:8px;
+   border-radius: 11px;
 }
-.btn-primary{background:#92a43a; color:#fff;}
+.btn-primary{
+    color: #986714;
+    border: 3px solid #c58f25;
+    background-color: #e4991024;
+   }
 .btn-ghost{background:transparent; color:var(--ink); border:1px solid rgba(29,33,26,0.3);}
 .btn-disabled{
   background:transparent;
