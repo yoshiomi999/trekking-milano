@@ -15,9 +15,7 @@
 html{scroll-behavior:smooth;}
 body{
   margin:0;
-  background:
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 42px),
-    var(--pine-950);
+  background-color:#3f4e41;
   color:var(--paper);
   font-family:'Source Sans 3', sans-serif;
   -webkit-font-smoothing:antialiased;
@@ -26,10 +24,28 @@ a{color:inherit;}
 
 .wrap{max-width:760px;margin:0 auto;padding:0 20px 80px;}
 
+
+.title-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+.title-header img{width:80px;height:80px;}
+
+.title-header h1{ 
+text-align: left;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .03em;
+    font-size: clamp(34px, 7vw, 52px);
+    line-height: 1.2;
+}
+
 header.hero{
-  padding:56px 20px 40px;
+  padding:25px 20px 0px 20px;
   text-align:center;
-  border-bottom:1px solid var(--line);
   position:relative;
   overflow:hidden;
 }
@@ -39,6 +55,8 @@ header.hero::before{
   background-image: linear-gradient(transparent, transparent);
   opacity:0.5;
 }
+
+
 .blaze{
   display:inline-flex;
   align-items:center;
@@ -61,15 +79,7 @@ header.hero::before{
   margin:0 0 10px;
 }
 
-h1{
-  font-family:'Oswald', sans-serif;
-  text-transform:uppercase;
-  font-weight:700;
-  letter-spacing:.03em;
-  font-size:clamp(34px, 7vw, 52px);
-  margin:0 0 14px;
-  line-height:1.02;
-}
+
 
 .sub{
     color: var(--paper-dim);
@@ -93,6 +103,41 @@ h1{
 }
 .tg-badge b{color:var(--paper);}
 .tg-badge .dot{width:6px;height:6px;background:#4caf6a;border-radius:50%;display:inline-block;}
+
+.sec-telegram{
+    position: relative;
+    display: block;
+    max-width: 410px;
+    margin: 0 auto;
+    padding: 12px 14px 11px;
+    color: var(--paper);
+    background: #2a718ad4;
+    /* border: 3px solid rgb(43 91 101); */
+    border-radius: 10px;
+    text-decoration: none;  
+}
+.sec-telegram img{
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    width: 56px;
+    height: 55px;
+}
+.sec-telegram .title{
+  text-align:left;
+  padding-left:65px;
+  display:block;
+  
+}
+.sec-telegram .title.main-title{
+   font-size:16px;
+  font-weight: 700;
+}
+.sec-telegram .title.sub-title{
+  margin:0;
+  color:white;
+  font-size:21px;
+}
 
 .week-label{
   display:flex;
@@ -172,13 +217,13 @@ h1{
 .day-tag.sat{background:#3eb0cc}
 .day-tag.dom{background:#df5941}
 .prov{
-    font-size: 16px;
+font-size: 16px;
     color: #000000;
     margin-top: -5px;
     margin-top: 12px;
-    background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, #76510030 100%);
-    border-radius: 3px;
-    padding: 2px 10px;
+    margin-right: -20px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #76510030 100%);
+    padding: 2px 30px 2px 10px;
     text-align: right;
 }
 
@@ -338,8 +383,6 @@ h2{
   height:25px;
 
 }
-.btn-youtube{}
-.btn-komoot{} 
 footer{
   text-align:center;
   margin-top:60px;
