@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrekMI — Archivio trek</title>
+<meta name="description" content="Tutte le uscite passate della community TrekMI di Milano.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=JetBrains+Mono:wght@400;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="archive.css">
+</head>
+<body>
+<header class="hero">
+  <div class="blaze" aria-hidden="true"><span class="w"></span><span class="r"></span><span class="w"></span></div>
+  <p class="eyebrow">Trekking Milano · Milano</p>
+  <h1>Archivio trek</h1>
+  <p class="sub">Tutte le uscite già fatte, settimana per settimana.</p>
+  <a class="back-link" href="index.html">← Torna alle uscite di questo weekend</a>
+</header>
+<div class="wrap">
+  <div id="archivio"></div>
+  <footer>Trekking Milano — La più grande associazione escursionista d'Italia.</footer>
+</div>
+<script>
+
+let ARCHIVIO = [];
+
+function dataIsoAGiorno(dataIso){
+  if (!dataIso) return '';
+  const [year, month, day] = dataIso.split('-').map(Number);
+  const giorni = ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'];
+  const mesi = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
+  return `${giorni[new Date(year, month - 1, day).getDay()]} ${day} ${mesi[month - 1]}`;
+}
+
+async function loadArchivio(){
+  const response = await fetch('./archivio_trek.json');
+  if (!response.ok) {
+    throw new Error(`Unable to load archive data: ${response.status}`);
+  }
+  ARCHIVIO = await response.json();
+  renderArchivio();
+}
+
+function renderArchivio(){
+  const container = document.getElementById('archivio');
+  if (!ARCHIVIO.length){
+    container.innerHTML = '<p class="empty">Ancora nessun trek in archivio.</p>';
+    return;
+  }
+  const settimane = [];
+  const indice = new Map();
+  ARCHIVIO.forEach(t => {
+    const giorno = t.giorno || dataIsoAGiorno(t.data_iso);
+    if (!indice.has(giorno)){
+      indice.set(giorno, { giorno, treks: [] });
+      settimane.push(indice.get(giorno));
+    }
+    indice.get(giorno).treks.push(t);
+  });
+
+  container.innerHTML = settimane.map(s => `
+    <section class="settimana">
+      <div class="week-label"><span>${s.giorno}</span><div class="line"></div></div>
+      <div class="lista">
+        ${s.treks.map(t => `
+          <article class="card">
+            <h2>${t.titolo}</h2>
+            ${t.monte ? `<p class="peak">${t.monte}</p>` : ''}
+            <p class="meta">
+              Organizzatore: <b>${t.organizzatore}</b> ·
+              ${t.lunghezza} · ${t.dislivello} m dislivello · ${t.difficolta}${t.note ? ' (' + t.note + ')' : ''}<br>
+              ${t.provincia}${t.distanza ? ' · ' + t.distanza : ''}
+              ${t.youtube ? `· <a href="${t.youtube}" target="_blank" rel="noopener">video del percorso</a>` : ''}
+            </p>
+          </article>
+        `).join('')}
+      </div>
+    </section>
+  `).join('');
+}
+
+loadArchivio().catch(error => {
+  console.error(error);
+  document.getElementById('archivio').innerHTML = '<p class="empty">Errore nel caricamento dell\'archivio.</p>';
+});
+</script>
+</body>
+</html>
