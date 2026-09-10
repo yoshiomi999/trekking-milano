@@ -15,7 +15,7 @@
 html{scroll-behavior:smooth;}
 body{
   margin:0;
-  background-color:#3f4e41;
+  background-color:#354237;
   color:var(--paper);
   font-family:'Source Sans 3', sans-serif;
   -webkit-font-smoothing:antialiased;
@@ -147,12 +147,12 @@ header.hero::before{
 }
 .week-label .line{flex:1;height:1px;background:var(--line);}
 .week-label span{
-  font-family:'JetBrains Mono', monospace;
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  font-size:12px;
-  color:var(--ochre);
-  white-space:nowrap;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 15px;
+  color: #ffa413;
+  white-space: nowrap;
 }
 
 #treks{display:flex;flex-direction:column;gap:22px;}
