@@ -17,7 +17,7 @@ body{
   margin:0;
   background-color:#354237;
   color:var(--paper);
-  font-family:'Source Sans 3', sans-serif;
+  font-family:"Source Serif 4", serif;
   -webkit-font-smoothing:antialiased;
 }
 a{color:inherit;}
@@ -34,15 +34,13 @@ a{color:inherit;}
 .title-header img{width:80px;height:80px;}
 
 .title-header h1{ 
-text-align: left;
-    font-family: 'Oswald', sans-serif;
+    text-align: left;
     text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: .03em;
+    font-weight: 900;
+     letter-spacing: .02em; 
     font-size: clamp(34px, 7vw, 52px);
     line-height: 1.2;
 }
-
 header.hero{
   padding:25px 20px 0px 20px;
   text-align:center;
@@ -71,7 +69,7 @@ header.hero::before{
 .blaze .r{background:red;}
   
 .eyebrow{
-  font-family:'JetBrains Mono', monospace;
+  
   letter-spacing:.14em;
   text-transform:uppercase;
   font-size:12px;
@@ -94,7 +92,7 @@ header.hero::before{
   display:inline-flex;
   align-items:center;
   gap:10px;
-  font-family:'JetBrains Mono', monospace;
+  
   font-size:13px;
   background:var(--pine-800);
   border:1px solid var(--line);
@@ -107,7 +105,7 @@ header.hero::before{
 .sec-telegram{
     position: relative;
     display: block;
-    max-width: 410px;
+    max-width: 450px;
     margin: 0 auto;
     padding: 12px 14px 11px;
     color: var(--paper);
@@ -147,12 +145,13 @@ header.hero::before{
 }
 .week-label .line{flex:1;height:1px;background:var(--line);}
 .week-label span{
-  font-family: 'JetBrains Mono', monospace;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 15px;
+  font-weight: 600;
   color: #ffa413;
   white-space: nowrap;
+  margin-left: 7px;
 }
 
 #treks{display:flex;flex-direction:column;gap:22px;}
@@ -183,25 +182,24 @@ header.hero::before{
 }
 
 .day-name {
-    min-width: 105px;
+    min-width: 115px;
     text-align: center;
    background-color: red;
     color: white;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 17px;
    border-top-left-radius:10px;
 }
 .day-name.sat{background:#57a8c8}
 .day-name.dom{background:#da8c28}
 .date {
-    min-width: 160px;
+    min-width: 170px;
     text-align: center;
     font-size: 17px;
     font-weight: 400;
     color:white;
 }
 .day-tag{
-    font-family: 'JetBrains Mono', monospace;
     font-size: 15px;
     color: white;
     font-weight: 600;
@@ -218,7 +216,7 @@ header.hero::before{
 .day-tag.dom{background:#df5941}
 .prov{
 font-size: 16px;
-    color: #000000;
+    color: #354237;
     margin-top: -5px;
     margin-top: 12px;
     margin-right: -20px;
@@ -228,12 +226,21 @@ font-size: 16px;
 }
 
 h2{
-  font-family:'Oswald', sans-serif;
+  font-weight: 400;
   text-transform:uppercase;
-  font-size:22px;
+  font-size:17px;
   line-height:1.15;
   margin:0 0 4px;
-  letter-spacing:.01em;
+  color:#354237
+
+}
+
+h3{
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.15;
+    margin: 0 0 4px;
+    color:#354237
 }
 .peak{
     font-size: 17px;
@@ -244,12 +251,15 @@ h2{
     line-height: 1.4em;
 }
 .organizer{
-  font-size:18px;
+  font-size:17px;
   color:#4c473b;
   margin-top: 8px;
   margin-bottom: 5px;
 }
-.organizer b{color:var(--ink);}
+.organizer b{
+  color:#354237;
+  font-size:20px;
+}
 
 .stats{
   display:grid;
@@ -260,7 +270,6 @@ h2{
   padding:16px 0;
 }
 .stat .k{
-  font-family:'JetBrains Mono', monospace;
   font-size:11px;
   text-transform:uppercase;
   letter-spacing:.06em;
@@ -268,7 +277,6 @@ h2{
   margin-bottom:4px;
 }
 .stat .v{
-  font-family:'JetBrains Mono', monospace;
   font-size:18px;
   font-weight:600;
 }
@@ -287,7 +295,6 @@ h2{
 
 .diff{
   display:inline-block;
-  font-family:'JetBrains Mono', monospace;
   font-size:11px;
   text-transform:uppercase;
   letter-spacing:.04em;
@@ -311,7 +318,6 @@ h2{
     margin-bottom: 15px;
 }
 .btn{
-  font-family:'JetBrains Mono', monospace;
   font-size:13px;
   text-transform:uppercase;
   text-decoration:none;
@@ -346,7 +352,6 @@ h2{
     min-height: 45px;
     align-items: center;
     gap: 9px;
-    font-family: 'JetBrains Mono', monospace;
     font-size: 15px;
     text-decoration: none;
     color: var(--ink);
@@ -388,7 +393,6 @@ footer{
   margin-top:60px;
   padding-top:26px;
   border-top:1px solid var(--line);
-  font-family:'JetBrains Mono', monospace;
   font-size:12px;
   color:var(--paper-dim);
   line-height:1.8;
@@ -404,7 +408,7 @@ footer a{
     border: 1px dashed var(--ochre);
 }
 
-footer .info h3{
+footer .info h4{
   text-align:left;
   margin-bottom: 0;
 }

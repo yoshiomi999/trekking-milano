@@ -1,6 +1,7 @@
 [
   {
-    "titolo": "Trek in Valsassina. Pizzo Cornagiera da Alpe Paglio 2048 m (LC)",
+    "sub-titolo": "Trek in Valsassina",
+    "titolo": "Pizzo Cornagiera da Alpe Paglio 2048 m (LC)",
     "descrizione": "Ciao a tutti! Rieccomi! Sabato 12 settembre organizzo un trek al Pizzo della Cornagiera (2048 m) partendo dall'Alpe Paglio. Circa 900 m di dislivello, 18 km, percorso A/R, circa 5 ore di camminata, pranzo al sacco. Godremo di bellissimi panorami sugli alpeggi e sulle vette circostanti. Partenza alle 9.30 da Alpe Paglio. Chi fosse interessato contatti in privato.",
     "organizzatore": "Pimpa",
     "lunghezza": "18 km",
@@ -14,8 +15,9 @@
     "data_iso": "2026-09-12",
     "komoot_link": null
   },
-    {
-    "titolo": "Trek sulle Prealpi Varesine. La Panchina Gigante di Saltrio 734 m (VA)",
+  {
+    "sub-titolo": "Trek sulle Prealpi Varesine",
+    "titolo": "La Panchina Gigante di Saltrio 734 m (VA)",
     "descrizione": "Camminata alla panchina gigante di Saltrio, giro ad anello di 10 km, dislivello 340 m. La parte in salita è solo nel primo 1,5 km, il resto è una camminata facile e bella; nei 10 km si arriva anche alle Trincee, con panorama sul lago. Non ci sono fontane lungo il percorso, quindi portare acqua propria, pranzo al sacco. Parcheggio gratuito al cimitero di Saltrio (VA), ritrovo ore 10:00. Consigliata una felpa perché arrivando alla panchina si è sudati e tira un po' d'aria. Percorso adatto anche a chi ha bambini.",
     "organizzatore": "Lorena",
     "lunghezza": "10 km",
@@ -30,7 +32,8 @@
     "komoot_link": null
   },
   {
-    "titolo": "Trek sulle Prealpi Varesine. Le Cascate di Ferrera 300 m (VA)",
+    "sub-titolo": "Trek sulle Prealpi Varesine",
+    "titolo": "Le Cascate di Ferrera 300 m (VA)",
     "descrizione": "Cascate di Ferrera, domenica 13 settembre 2026. Ritrovo ore 9:45, partenza ore 10:00 con massima puntualità. Camminata fra le campagne e le colline della Valcuvia, senza difficoltà tecniche, che porta a scoprire alcuni angoli suggestivi della zona come le cascate di Ferrera, l'Orrido di Cunardo e un museo di ceramiche dentro una vecchia fornace nascosta nel bosco. Percorso ad anello, richiesto un buon allenamento e dimestichezza con sentieri sterrati nei boschi. Circa 12 km con un dislivello di 280 m. Pranzo previsto alla festa del fungo di Cunardo, nota per la qualità del cibo (possibile coda lunga).",
     "organizzatore": "Gianfranco",
     "lunghezza": "12 km",
@@ -45,7 +48,8 @@
     "komoot_link": null
   },
   {
-    "titolo": "Trek col treno in Liguria + bagno. I laghetti della Tina 505 m (GE)",
+    "sub-titolo": "Trek col treno in Liguria + bagno",
+    "titolo": "I laghetti della Tina 505 m (GE)",
     "descrizione": "Arenzano - laghetti della Tina + bagno al mare. Escursione parzialmente ad anello senza particolari difficoltà tecniche, a parte brevi tratti con pendenza oltre il 20%, con parte iniziale e finale su strade asfaltate a basso traffico. Partenza dal centro di Arenzano verso l'entroterra fino alle pozze naturali formate dal rio Leone, con sosta per rinfrescarsi. Termine dell'escursione alle 16:30 circa, poi ritorno sulla costa per chi vuole fare il bagno al mare. Temperatura massima prevista di circa 27 gradi. Ritrovo e partenza ore 9:30 dalla stazione di Arenzano (treno da Bergamo delle 6:30, Milano Rogoredo alle 7:21).",
     "organizzatore": "Provasi",
     "lunghezza": "13 km",
@@ -60,7 +64,8 @@
     "komoot_link": null
   },
   {
-    "titolo": "Trek in Val Seriana. Cima di Grem da Zambla Alta 2049 m (BG)",
+    "sub-titolo": "Trek in Val Seriana",
+    "titolo": "Cima di Grem da Zambla Alta 2049 m (BG)",
     "descrizione": "Domenica 13 settembre 2026, Cima di Grem (2000 m) da Zambla Alta. Dalla vetta si vede il gruppo del Monte Alben-Arera, tra le montagne più note delle Orobie bergamasche. Percorso ad anello, altitudine 1.200-2.000 m, dislivello 860 m, tempo 5:42 ore, distanza 11,6 km. Difficoltà media: gli ultimi 200 m di salita sono ripidi, con pendenza oltre il 30%, senza tratti esposti. Consigliata una giacca autunnale per il calo di temperatura. 15-20 partecipanti, pranzo al sacco. Trekking previsto in chiusura alle 17 al parcheggio, rientro a Milano verso le 19.30.",
     "organizzatore": "Yoshi",
     "lunghezza": "12 km",

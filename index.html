@@ -7,7 +7,7 @@
 <meta name="description" content="Trekking Milano è un gruppo social, ogni fine settimana proponiamo nuovi programmi di trekking in Lombardia. Le escursioni sono tutte gratuite ed aperte a tutti. ">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=JetBrains+Mono:wght@400;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -49,15 +49,15 @@ Per partecipare servono solo l’app Telegram, e il piacere di condividere l’e
     <a href="archive.html">Vedi i trek passati →</a>
 
     <div class="info">
-      <h3>6.700 ISCRITTI</h3>
+      <h4>6.700 ISCRITTI</h4>
       <p>La gente esulta perché Trekking Milano ha raggiunto 6.700 iscritti</p>
-      <h3>100 PARTECIPANTI</h3>
+      <h4>100 PARTECIPANTI</h4>
       <p>Ogni weekend portiamo in montagna 100 persone. Siamo la più grande associazione escursionista d'Italia. </p>
-      <h3>TELEGRAM</h3>
+      <h4>TELEGRAM</h4>
       <p>Noi siamo il futuro perchè utilizziamo Telegram.  </p>
-      <h3>SENZA PRESIDENTE</h3>
+      <h4>SENZA PRESIDENTE</h4>
       <p>Trekking Milano non ha un presidente, né uno statuto, né una lista degli iscritti. In pratica, siamo un gruppo di amici. </p>
-      <h3>ORGANIZZATORI</h3>
+      <h4>ORGANIZZATORI</h4>
       <p>Trekking Milano nasce dall'incontro di 11 organizzatori che hanno deciso di dare la propria vita al popolo. </p>
     </div>
   </footer>
@@ -111,7 +111,8 @@ function renderTreks(){
             <span class="day-name ${dayClass(t.data_iso, t.giorno)}">${formatWeekday(t.data_iso, t.giorno)}</span>
             <span class="date">${formatDate(t.data_iso, t.giorno)}</span>
         </div>
-        <h2>${t.titolo}</h2>
+        <h2>${t['sub-titolo']}</h2>
+        <h3>${t.titolo}</h3>
         <div class="prov">${t.provincia} · ${t.distanza}</div>
         <p class="organizer">Organizzatore: <b>${t.organizzatore}</b></p>
         ${descrizione ? `<p class="peak">${descrizione}</p>` : ''}
