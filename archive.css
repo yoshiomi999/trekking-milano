@@ -17,7 +17,7 @@
 
 body {
   margin: 0;
-  background: var(--pine-950);
+  background-color:#354237 ;
   color: var(--paper);
   font-family: 'Source Sans 3', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -36,7 +36,6 @@ a {
 header.hero {
   padding: 56px 20px 32px;
   text-align: center;
-  border-bottom: 1px solid var(--line);
 }
 
 .blaze {
@@ -88,40 +87,32 @@ h1 {
 }
 
 .back-link {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  text-decoration: none;
-  color: var(--paper-dim);
-  border-bottom: 1px dashed var(--paper-dim);
-  padding-bottom: 2px;
+    display: block;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    max-width: 720px;
+    color: #ffbe56;
+    font-size: larger;
+    background-color: #c08a3430;
+    text-decoration: none;
+    border: 1px dashed var(--ochre);
 }
 
 .week-label {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin: 44px 0 18px;
+    margin: 20px 0 10px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    color: #eba12b;
+    white-space: nowrap;
 }
 
-.week-label .line {
-  flex: 1;
-  height: 1px;
-  background: var(--line);
-}
-
-.week-label span {
-  font-family: 'JetBrains Mono', monospace;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  font-size: 12px;
-  color: var(--ochre);
-  white-space: nowrap;
-}
 
 #archivio {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 12px;
 }
 
 .settimana .lista {
@@ -131,24 +122,16 @@ h1 {
 }
 
 .card {
-  background: var(--paper);
+  background: #efe9db;
   color: var(--ink);
   border-radius: 3px;
-  padding: 20px 22px;
+  padding: 16px 16px;
   position: relative;
   box-shadow: 0 10px 24px -14px rgba(0, 0, 0, 0.5);
   opacity: 0.92;
+   border-radius:12px;
 }
 
-.card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 5px;
-  background: var(--cai-red-dim);
-}
 
 h2 {
   font-family: 'Oswald', sans-serif;
@@ -168,9 +151,12 @@ h2 {
 }
 
 .meta {
-  font-size: 13px;
-  color: #4c473b;
-  line-height: 1.6;
+      margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #4c473b;
+    line-height: 1.5;
+
 }
 
 .meta b {

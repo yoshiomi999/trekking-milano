@@ -9,13 +9,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=JetBrains+Mono:wght@400;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="archive.css">
+<script src="common.js"></script>
 </head>
 <body>
 <header class="hero">
-  <div class="blaze" aria-hidden="true"><span class="w"></span><span class="r"></span><span class="w"></span></div>
+  <div class="blaze" aria-hidden="true"></div>
   <p class="eyebrow">Trekking Milano · Milano</p>
-  <h1>Archivio trek</h1>
-  <p class="sub">Tutte le uscite già fatte, settimana per settimana.</p>
+  <h1>Archivio</h1>
+  <p class="sub">Tutti trekking che già abbiamo fatto</p>
   <a class="back-link" href="index.html">← Torna alle uscite di questo weekend</a>
 </header>
 <div class="wrap">
@@ -25,14 +26,6 @@
 <script>
 
 let ARCHIVIO = [];
-
-function dataIsoAGiorno(dataIso){
-  if (!dataIso) return '';
-  const [year, month, day] = dataIso.split('-').map(Number);
-  const giorni = ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'];
-  const mesi = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
-  return `${giorni[new Date(year, month - 1, day).getDay()]} ${day} ${mesi[month - 1]}`;
-}
 
 async function loadArchivio(){
   const response = await fetch('./archivio_trek.json');
@@ -52,17 +45,17 @@ function renderArchivio(){
   const settimane = [];
   const indice = new Map();
   ARCHIVIO.forEach(t => {
-    const giorno = t.giorno || dataIsoAGiorno(t.data_iso);
-    if (!indice.has(giorno)){
-      indice.set(giorno, { giorno, treks: [] });
-      settimane.push(indice.get(giorno));
+    const chiave = t.data_iso || t.giorno;
+    if (!indice.has(chiave)){
+      indice.set(chiave, { dataIso: t.data_iso, giorno: t.giorno, treks: [] });
+      settimane.push(indice.get(chiave));
     }
-    indice.get(giorno).treks.push(t);
+    indice.get(chiave).treks.push(t);
   });
 
   container.innerHTML = settimane.map(s => `
     <section class="settimana">
-      <div class="week-label"><span>${s.giorno}</span><div class="line"></div></div>
+      <div class="week-label">${formatWeekday(s.dataIso, s.giorno)} ${formatDate(s.dataIso, s.giorno)}</div>
       <div class="lista">
         ${s.treks.map(t => `
           <article class="card">
