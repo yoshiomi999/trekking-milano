@@ -41,6 +41,12 @@ Per partecipare servono solo l’app Telegram, e il piacere di condividere l’e
 
 <div class="wrap">
   <div class="week-label"><span>Prossime uscite</span><div class="line"></div></div>
+
+  <div id="notice">
+    <div class="notice-title" id="notice-title"></div>
+    <div class="notice-msg">Le proposte per weekend saranno pubblicate a qeusto mercoledi</div>
+  </div>
+
   <div id="treks"></div>
 
   <footer>  
@@ -73,6 +79,14 @@ Per partecipare servono solo l’app Telegram, e il piacere di condividere l’e
 ------------------------------------------------------------------- */
 const MAX_DISLIVELLO = 1200;
 
+const oggi = new Date();
+const oggiGiorno = oggi.getDay(); // 0=Dom, 1=Lun, 2=Mar, 3=Mer, 4=Gio, 5=Ven, 6=Sab
+const oggiIso = `${oggi.getFullYear()}-${String(oggi.getMonth() + 1).padStart(2, '0')}-${String(oggi.getDate()).padStart(2, '0')}`;
+const notice = document.getElementById('notice');
+if (notice) notice.hidden = !(oggiGiorno >= 1 && oggiGiorno <= 3);
+const noticeTitle = document.getElementById('notice-title');
+if (noticeTitle) noticeTitle.textContent = `Oggi è ${formatWeekday(oggiIso)}`;
+
 let TREKS = [];
 
 const DIFF_COLORS = {
@@ -86,6 +100,13 @@ const DIFF_COLORS = {
 function diffColor(diff){
   const key = diff.toLowerCase().trim();
   return DIFF_COLORS[key] || "#c08a34";
+}
+
+function isExpired(dataIso){
+  if (!dataIso) return false;
+  const [year, month, day] = dataIso.split('-').map(Number);
+  const dataTrek = new Date(year, month - 1, day, 23, 59, 59, 999);
+  return dataTrek < new Date();
 }
 
 async function loadTreks(){
@@ -106,7 +127,7 @@ function renderTreks(){
       ? t.descrizione.trim()
       : '';
     return `
-      <article class="card">
+      <article class="card ${isExpired(t.data_iso) ? ' expired' : ''}">
         <div class="card-top">
             <span class="day-name ${dayClass(t.data_iso, t.giorno)}">${formatWeekday(t.data_iso, t.giorno)}</span>
             <span class="date">${formatDate(t.data_iso, t.giorno)}</span>
