@@ -188,7 +188,7 @@ header.hero::before{
 .day-name {
     min-width: 115px;
     text-align: center;
-   background-color: red;
+    background-color: #68b83c;
     color: white;
     font-weight: 700;
     font-size: 17px;
