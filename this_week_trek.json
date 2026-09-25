@@ -1,5 +1,21 @@
 [
   {
+    "sub-titolo": "Trek nel Triangolo Lariano",
+    "titolo": "Pizzo Tre Termini 1100 m (CO)",
+    "descrizione": "Pizzo Tre Termini / Castel d'Ardona. Escursione ad anello fra i boschi del triangolo lariano con panorami sulla Brianza e il lago di Como, fino ai ruderi del Castel d'Ardona. Il tracciato si snoda su sentieri senza particolari difficoltà tecniche, tranne alcuni brevi tratti con pendenza superiore al 20%. Quota minima 500 m, massima 1100 m. Ritrovo ore 9:30 a Ponzate, termine dell'escursione fra le 16:30 e le 17 circa. È un percorso fatto per la prima volta dall'organizzatore, quindi soggetto a eventuali modifiche.",
+    "organizzatore": "Provasi",
+    "lunghezza": "13 km",
+    "dislivello": 700,
+    "difficolta": "Medio facile",
+    "pranzo": "Pranzo al sacco",
+    "provincia": "Prov. di Como",
+    "distanza": "45 km da Milano",
+    "iscrizione": "https://t.me/TrekMI/85034",
+    "youtube": "https://youtu.be/v_dyvPIQ0bQ",
+    "data_iso": "2026-09-26",
+    "komoot_link": null
+  },
+  {
     "sub-titolo": "Trek in Val Brembana",
     "titolo": "Rifugio Calvi da Carona 2015 m (BG)",
     "descrizione": "Sabato 26 rifugio Calvi da Carona, Val Brembana. Max 12 persone, dislivello circa 800 m, impegno fisico medio, partenza da Milano ore 7 circa.",
@@ -63,36 +79,20 @@
     "data_iso": "2026-09-27",
     "komoot_link": "https://www.komoot.com/it-it/tour/943211711"
   },
-    {
-    "sub-titolo": "Alta Val Brembana",
-    "titolo": "Trek ai Laghi di Ponteranica da Cusio (BG)",
-    "descrizione": "Proposta di giovedì 24 settembre laghi di Ponteranica da Cusio. Un trek poco impegnativo, 530 m di dislivello per 8 km, ma molto panoramico. Obiettivo: una tranquilla camminata nel verde e un pic-nic al lago, lasciando fretta e stress a Milano. Sono graditi anche giochi o carte da gioco. Ritrovo al Rio Ry di Legnano, uscita autostrada, ore 6:15, oppure ad Agrate ore 7:00.",
-    "organizzatore": "Pamela",
-    "lunghezza": "8 km",
-    "dislivello": 530,
-    "difficolta": "Poco impegnativa",
-    "pranzo": "Pic-nic al lago",
-    "provincia": "Prov. di Bergamo",
-    "distanza": null,
-    "iscrizione": "https://t.me/TrekMI/84979",
-    "youtube": null,
-    "data_iso": "2026-09-24",
-    "komoot_link": "https://www.komoot.it/tour/3284524037?ref=aso&share_token=a8RicsoaIknlVYXufFWkaSBsVBJbOAnRrqFh0g8D51sdkFiCXG&t_s=referral&t_cid=route_share"
-  },
-    {
-    "sub-titolo": "Trek sul Lago di Lecco",
-    "titolo": "Monte Legnoncino da Sueglio 1714 m (LC)",
-    "descrizione": null,
-    "organizzatore": "SaSaMi34",
+  {
+    "sub-titolo": "Trek in Valtellina",
+    "titolo": "Lago di Trona 1805 m (SO)",
+    "descrizione": "Torniamo in Valgerola per scoprire la Valle della Pietra, seguendo il torrente della Pietra fra abeti, pini e faggi fino al Lago di Trona. Valle selvaggia e poco frequentata, con possibilità di avvistare caprioli, camosci, stambecchi e altra fauna. Arrivati al lago, pranzo in condivisione tutti insieme; per i più coraggiosi possibilità di fare il bagno. Durata circa 4,5 ore oltre le pause, temperatura prevista 15-20°C. Punti di ritrovo: ore 8:00 al Bar La Vergine (Verano); ore 7:40 alla metro Sesto FS; ore 9:45 a Gerola Alta (già colazionati). Costo auto in condivisione 50€. Massimo 30 partecipanti. Aggregazione spontanea, senza guida né copertura assicurativa: i partecipanti sono responsabili individualmente della propria partecipazione.",
+    "organizzatore": "Piero",
     "lunghezza": "10 km",
-    "dislivello": 560,
+    "dislivello": 700,
     "difficolta": "Media",
     "pranzo": "Pranzo al sacco",
-    "provincia": "Prov. di Lecco",
-    "distanza": "87 km da Milano",
-    "iscrizione": "https://t.me/TrekMI/84802",
-    "youtube": "https://youtu.be/PoJUyjwKStE",
-    "data_iso": "2026-09-20",
-    "komoot_link": "https://www.komoot.it/smarttour/43935812?ref=atd&t_s=referral&t_cid=route_share"
+    "provincia": "Prov. di Sondrio",
+    "distanza": "120 km da Milano",
+    "iscrizione": "https://t.me/TrekMI/85036",
+    "youtube": "https://youtu.be/a_jsxX-Hx-s",
+    "data_iso": "2026-09-27",
+    "komoot_link": null
   }
 ]
