@@ -41,17 +41,21 @@ a{color:inherit;}
     font-size: clamp(34px, 7vw, 52px);
     line-height: 1.2;
 }
-header.hero{
-  padding:25px 20px 0px 20px;
+header{
   text-align:center;
   position:relative;
   overflow:hidden;
 }
-header.hero::before{
-  content:"";
-  position:absolute; inset:0;
-  background-image: linear-gradient(transparent, transparent);
-  opacity:0.5;
+
+header .menu{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    background-color: rgb(52 130 64);
+    color: white;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 18px;
 }
 
 
